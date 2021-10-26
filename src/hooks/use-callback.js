@@ -1,20 +1,23 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 const Child = ({ returnData }) => {
   useEffect(() => {
     console.log("FUNCTION WAS CALLED!");
   }, [returnData]);
 
-  return <div>{returnData()}</div>;
+  return <div>{returnData(" - Raviteja")}</div>;
 };
 
 export const UseCallback = () => {
   const [data] = useState("Sample data");
   const [toggle, setToggle] = useState(false);
 
-  const returnData = () => {
-    return data;
-  };
+  const returnData = useCallback(
+    (name) => {
+      return data + name;
+    },
+    [data]
+  );
 
   return (
     <div>
