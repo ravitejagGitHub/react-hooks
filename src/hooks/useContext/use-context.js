@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { createContext, useState } from "react";
 import { Login } from "./login";
 import { User } from "./user";
+
+export const UserContext = createContext(null);
 
 export const UseConext = () => {
   const [username, setUsername] = useState("Default");
 
   return (
-    <>
-      <Login setUsername={setUsername} />
-      <User username={username} />
-    </>
+    <UserContext.Provider value={{ username, setUsername }}>
+      <Login />
+      <User />
+    </UserContext.Provider>
   );
 };

@@ -1,5 +1,8 @@
-export const Login = (props) => {
-  const { setUsername } = props;
+import { useContext } from "react";
+import { UserContext } from "./use-context";
+
+export const Login = () => {
+  const { setUsername } = useContext(UserContext);
   return (
     <div>
       <input
