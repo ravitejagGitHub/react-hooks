@@ -20,7 +20,7 @@ export const UseEffect = () => {
         <legend>Use Effect:</legend>
         <ul>
           {data.slice(0, 3).map((item) => (
-            <li> {item.title}</li>
+            <li key={item.id}> {item.title}</li>
           ))}
         </ul>
       </fieldset>
