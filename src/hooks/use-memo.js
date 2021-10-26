@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 const fetchData = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -30,11 +30,15 @@ export const UseMemo = () => {
     return longestPost;
   };
 
+  const getLongestPost = useMemo(() => {
+    return findLongestPost(data);
+  }, [data]);
+
   return (
     <div>
       <fieldset>
         <legend>Use Memo:</legend>
-        <h4> {findLongestPost(data)}</h4>
+        <h4> {getLongestPost}</h4>
         <button onClick={() => setToggle(!toggle)}>Toggle</button>
         {toggle && <h4>Toggle Text</h4>}
       </fieldset>
