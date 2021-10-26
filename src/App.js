@@ -5,6 +5,7 @@ import { UseLayoutEffect } from "./hooks/use-layout-effect";
 import { UseReducer } from "./hooks/use-reducer";
 import { UseRef } from "./hooks/use-ref";
 import { UseState } from "./hooks/use-state";
+import { UseConext } from "./hooks/useContext/use-context";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <UseRef />
       <UseLayoutEffect />
       <UseImperavtiveHandle />
+      <UseConext />
     </div>
   );
 }
