@@ -1,11 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import { UseState } from './hooks/user-state';
+import "./App.css";
+import { UseReducer } from "./hooks/use-reducer";
+import { UseState } from "./hooks/use-state";
 
 function App() {
   return (
     <div className="App">
       <UseState />
+      <UseReducer />
     </div>
   );
 }
