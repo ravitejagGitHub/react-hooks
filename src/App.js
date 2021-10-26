@@ -1,4 +1,5 @@
 import "./App.css";
+import { UseCallback } from "./hooks/use-callback";
 import { UseEffect } from "./hooks/use-effect";
 import { UseImperavtiveHandle } from "./hooks/use-imperative-handle";
 import { UseLayoutEffect } from "./hooks/use-layout-effect";
@@ -11,6 +12,7 @@ import { UseConext } from "./hooks/useContext/use-context";
 function App() {
   return (
     <div className="App">
+      <UseCallback />
       <UseMemo />
       <UseState />
       <UseReducer />
