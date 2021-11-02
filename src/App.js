@@ -1,4 +1,5 @@
 import "./App.css";
+import { CustomHook } from "./hooks/custom-hooks/customHook";
 import { UseCallback } from "./hooks/use-callback";
 import { UseEffect } from "./hooks/use-effect";
 import { UseImperavtiveHandle } from "./hooks/use-imperative-handle";
@@ -12,6 +13,7 @@ import { UseConext } from "./hooks/useContext/use-context";
 function App() {
   return (
     <div className="App">
+      <CustomHook />
       <UseCallback />
       <UseMemo />
       <UseState />
